@@ -3,7 +3,7 @@
 int main()
 {
     int grades[10];
-    int integers[5] = {0, 1, 2, 3, 4}; 
+    int integers[5] = {0, 1, 2, 3}; 
     int count = 10;
     long sum = 0;
     float average = 0.0f;
