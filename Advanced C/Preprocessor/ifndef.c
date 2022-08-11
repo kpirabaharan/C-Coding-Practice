@@ -3,6 +3,7 @@
 
 #define JUST_CHECKING // Init to 0
 #define LIMIT 4
+#undef JUST_CHECKING
 
 int main()
 {
