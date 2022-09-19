@@ -1,4 +1,5 @@
-.vscode/
+.vscode
 .idea/*
 .DS_Store
 .tmp.driveupload/
+Intro-to-C/.vscode
