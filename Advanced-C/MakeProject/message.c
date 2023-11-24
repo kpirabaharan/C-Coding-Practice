@@ -3,5 +3,5 @@
 
 void printMessage()
 {
-    printf("Makefile Example");
+  printf("Makefile Example\n");
 }
