@@ -1,5 +1,8 @@
+all: output
+
 output:	main.o message.o
-	gcc main.o message.o -o output
+	@echo "Linking all object files..."
+	@gcc main.o message.o -o output
 
 main.o: main.c
 	gcc -c main.c
