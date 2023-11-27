@@ -129,6 +129,30 @@ Hello_World/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hello_World.dir/build.make CMakeFiles/Hello_World.dir/build
 .PHONY : Hello_World/fast
 
+adder.o: adder.c.o
+.PHONY : adder.o
+
+# target to build an object file
+adder.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hello_World.dir/build.make CMakeFiles/Hello_World.dir/adder.c.o
+.PHONY : adder.c.o
+
+adder.i: adder.c.i
+.PHONY : adder.i
+
+# target to preprocess a source file
+adder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hello_World.dir/build.make CMakeFiles/Hello_World.dir/adder.c.i
+.PHONY : adder.c.i
+
+adder.s: adder.c.s
+.PHONY : adder.s
+
+# target to generate assembly for a file
+adder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hello_World.dir/build.make CMakeFiles/Hello_World.dir/adder.c.s
+.PHONY : adder.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Hello_World"
+	@echo "... adder.o"
+	@echo "... adder.i"
+	@echo "... adder.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
