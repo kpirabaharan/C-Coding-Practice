@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build/CMakeFiles /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build/CMakeFiles /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build/Adder//CMakeFiles/progress.marks
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Adder/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Adder/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Adder/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Adder/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Add_Project
+# Convenience name for target.
+Adder/CMakeFiles/adder.dir/rule:
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Adder/CMakeFiles/adder.dir/rule
+.PHONY : Adder/CMakeFiles/adder.dir/rule
 
-# Build rule for target.
-Add_Project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Add_Project
-.PHONY : Add_Project
-
-# fast build rule for target.
-Add_Project/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Add_Project.dir/build.make CMakeFiles/Add_Project.dir/build
-.PHONY : Add_Project/fast
-
-#=============================================================================
-# Target rules for targets named adder
-
-# Build rule for target.
-adder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 adder
+# Convenience name for target.
+adder: Adder/CMakeFiles/adder.dir/rule
 .PHONY : adder
 
 # fast build rule for target.
 adder/fast:
-	$(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/build
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/build
 .PHONY : adder/fast
 
-main.o: main.c.o
-.PHONY : main.o
+adder.o: adder.c.o
+.PHONY : adder.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Add_Project.dir/build.make CMakeFiles/Add_Project.dir/main.c.o
-.PHONY : main.c.o
+adder.c.o:
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/adder.c.o
+.PHONY : adder.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+adder.i: adder.c.i
+.PHONY : adder.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Add_Project.dir/build.make CMakeFiles/Add_Project.dir/main.c.i
-.PHONY : main.c.i
+adder.c.i:
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/adder.c.i
+.PHONY : adder.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+adder.s: adder.c.s
+.PHONY : adder.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Add_Project.dir/build.make CMakeFiles/Add_Project.dir/main.c.s
-.PHONY : main.c.s
+adder.c.s:
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/adder.c.s
+.PHONY : adder.c.s
 
 # Help Target
 help:
@@ -174,11 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Add_Project"
 	@echo "... adder"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... adder.o"
+	@echo "... adder.i"
+	@echo "... adder.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/kpirabaharan/Developer/C-Coding-Practice/Advanced-C/CMakeProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
